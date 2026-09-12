@@ -101,17 +101,18 @@ document.addEventListener("keydown", function(e){
 
 
 function gameOver(){
+    snake=[
+        {x:80, y:200},
+        {x:60, y:200},
+        {x:40, y:200}
+        ];
     clearInterval(game);
     alert("게임오버");
 }
 
 function gameStart(){
     clearInterval(game);
-    snake=[
-        {x:80, y:200},
-        {x:60, y:200},
-        {x:40, y:200}
-        ];
+    
     dr={x:tyle, y:0};
     food={x:320, y:200};
     game=setInterval(draw, 100)
